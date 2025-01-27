@@ -1,0 +1,63 @@
+<?php
+include "config.php"; // Include your database configuration file
+session_start();
+
+?>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Appointments</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Appointments for  <?php echo htmlspecialchars($doctor_name); ?></h2>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Appointment Date</th>
+                    <th>Department</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+          
+        </table>
+    </div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> -->
+
+<header>
+    <div class="branding">
+        <h1>Karpagam</h1>
+        <?php echo $_SESSION['doctor_name']; ?>
+        <a href="logout.php" class="btn btn-danger btn-sm">Logout</a>
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+<tbody>
+                <?php while ($appointment = mysqli_fetch_assoc($result)) { ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($appointment['name']); ?></td>
+                        <td><?php echo htmlspecialchars($appointment['email']); ?></td>
+                        <td><?php echo htmlspecialchars($appointment['phone']); ?></td>
+                        <td><?php echo htmlspecialchars($appointment['appointment_date']); ?></td>
+                        <td><?php echo htmlspecialchars($appointment['department']); ?></td>
+                        <td><?php echo htmlspecialchars($appointment['message']); ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>

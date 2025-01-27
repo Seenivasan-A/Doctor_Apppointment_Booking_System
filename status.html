@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Appointment Status</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header id="header" class="header sticky-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Karpagam</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="appointment.html">Make Appointment</a></li>
+          <li><a href="status.html" class="active">Appointment Status</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Status Section -->
+  <section id="status" class="status section">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Appointment Status</h2>
+        <p>Check the current status of your appointment request.</p>
+      </div>
+
+      <!-- Appointment Status Table -->
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Appointment ID</th>
+                <th>Patient Name</th>
+                <th>Doctor</th>
+                <th>Department</th>
+                <th>Date & Time</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- This will be dynamically populated based on appointment status -->
+              <tr>
+                <td>123456</td>
+                <td>John Doe</td>
+                <td>Dr. Karthikeyan</td>
+                <td>Cardiology</td>
+                <td>2024-10-23 10:00 AM</td>
+                <td class="text-success">Accepted</td>
+              </tr>
+              <!-- More rows for different appointments -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Status Section -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
